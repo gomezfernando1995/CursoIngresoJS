@@ -9,7 +9,7 @@ function mostrarAumento()
 	let resultado;
 	
 	importe   = parseInt (document.getElementById("txtIdImporte").value);
-	resultado = (importe - (importe*0.25));
+	resultado = importe - (importe*0.25);
 
 	document.getElementById("txtIdResultado").value = resultado;
 
