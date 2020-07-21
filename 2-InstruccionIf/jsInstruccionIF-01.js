@@ -3,15 +3,18 @@ function mostrar()
 	let EdadIngresada;
 	let Permiso
 	
-	EdadIngresada = parseInt(document.getElementById("txtIdEdad").value);
-	Permiso = EdadIngresada >= 15
+	Edad = parseInt(document.getElementById("txtIdEdad").value);
 	
-	if  (Permiso)
+	
+	if  (Edad == 15)
 	{ 
-		  alert("Bienvenido chico/ca")
+		  alert("niña bonita");
 	}
-	else
+	if  (Edad == 16)
 	{
-          alert ("Sos menor volve en unos años")
+       alert("fachero");
+
 	}
+	alert ("fin de la funcion");
+	
 }
