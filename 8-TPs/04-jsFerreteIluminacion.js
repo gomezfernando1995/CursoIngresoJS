@@ -38,7 +38,7 @@ function CalcularPrecio ()
               } 
                 break;
           case 4: 
-                if( marca == "ArgentinaLuz" || marce == "FelipeLamparas"){
+                if( marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
                     descuento = 25;
                 }
                 else{

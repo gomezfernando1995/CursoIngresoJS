@@ -4,7 +4,25 @@ function mostrar()
 	var puntos;
 	puntos = document.getElementById("txtIdDestino").value;
 
-	switch(puntos){
+	if (puntos == "Bariloche"){
+		alert ("hace frio");
+   }
+   
+   else if   (puntos == "Cataratas"){
+	   alert("hace calor");
+   }    
+   
+   else if  (puntos == "Mar del plata"){
+	   alert("hace calor");
+	}
+   
+   else if (puntos == "Ushuaia"){
+	   alert("hace frio");
+   }
+	
+	
+	
+	/* switch(puntos){
 
 	case "Bariloche":
 		 alert ("Hace frio ");
@@ -21,5 +39,5 @@ function mostrar()
 	case "Ushuaia":
         alert("Hace frio");
         break;
-  }
+  }*/
 }//FIN DE LA FUNCIÓN

@@ -2,93 +2,147 @@ function mostrar()
 {
 	var estaciones;
 	var destinos;
+	var total;
 
-	var BariInvierno;
-	var CataInvierno;
-	var MarInvierno;
-	var CorInvierno;
-
-	var BariVerano;
-	var CataVerano;
-	var MarVerano;
-	var CorVerano;
-
-	
 	estaciones = document.getElementById("txtIdEstacion").value;
 	destinos   = document.getElementById("txtIdDestino").value;
 
-	switch (estaciones && destinos){
+	 switch (estaciones){
+			case "Invierno" :	
+			   switch (destinos){
 
-			//Vacaciones en invierno
-
-			case "Invierno" && "Bariloche":
-				{
-				
-				BariInvierno = 15000*0.20+15000
-				alert (`El precio del viaje a bariloche en  invierno es de ${BariInvierno}`);
-				break;
+				case "Bariloche" :
+					total= 15000*1.2;
+					break;
+				case "Cataratas" :		
+				    total = 15000*0.9;
+					break;
+				case "Mar del plata" :
+				    total = 15000*0.8;
+					break;
+				case "Cordoba":
+					total = 15000*0.9;
+					break;
 				}
-			case "Invierno" && "Cataratas":{
+				alert (`El precio de viaje a ${destinos} en invierno $${total}`)
+	}	
+     switch(estaciones){  
+		    case "Verano" :
+				 switch (destinos){
 
-				CataInvierno = 15000 -(15000*0.10);
-				alert (`El precio del viaje a las cataratas en invierno es de ${CataInvierno}`);
-				break;
-			}
-			case "Invierno" && "Mar del plata":{
-
-				MarInvierno = 15000-(15000*0.20);
-				alert(`El precio del viaje a mar del plata en invierno es de ${MarInvierno}`);
-				break;
-			}
-			case "Invierno" && "Cordoba":{
-
-				CorInvierno = 15000-(15000*0.10);
-				alert(`El precio del viaje a cordoba en invierno es de ${CorInvierno}`);
-				break;
-			}
-
-
-		// Vacaciones en verano
-
-		switch (estaciones && destinos){
-
-		case "Verano" && "Bariloche":
-			{
-				
-				BariVerano = 15000-(15000*0.20)
-				alert (`El precio del viaje a bariloche en  verano es de ${BariVerano}`);
-				break;
+					case "Bariloche" :
+						total = 15000*0.8;			
+						break;				
+					case "Cataratas" :
+						total = 15000*1.1;			
+						break;					
+					case "Mar del plata":
+						total  = 15000*1.2;	
+						break;		
+					case "Cordoba" :
+						total = 15000*1.1;
+						break;
 				}
-			case "Verano" && "Cataratas":{
-
-				CataInvierno = 15000 -(15000*0.10);
-				alert (`El precio del viaje a las cataratas en invierno es de ${CataInvierno}`);
-				break;
+				alert (`El precio de viaje a ${destinos} en verano $${total}`)
+	 }
+	 switch(estaciones){  	
+			case "Otoño" :
+				switch (destinos){
+	
+				case "Bariloche" :
+					total = 15000*1.1;
+					break;			
+				case "Cataratas" :
+					total= 115000*1.1;					
+					break;				
+				case "Mar del plata":
+					total = 15000*1.1;
+					break;				
+				case "Cordoba" :
+					total = 15000					
+					break;
+				}
+				alert (`El precio de viaje a ${destinos} en otoño $${total}`)
+ }		
+ switch(estaciones){  
+		case "Primavera" :
+				switch (destinos){
+				
+				case "Bariloche" :
+					total = 15000*1.1;	
+					break;			
+				case "Cataratas" :
+					total= 15000*1.1;			
+					break;	
+				case "Mar del plata":
+					total = 15000*1.1;			
+					break;		
+				case "Cordoba" :
+					total = 15000				
+					break;
 			}
-			case "Verano" && "Mar del plata":{
+			alert (`El precio de viaje a ${destinos} en primavera $${total}`)
+    }
 
-				MarInvierno = 15000-(15000*0.20);
-				alert(`El precio del viaje a mar del plata en invierno es de ${MarInvierno}`);
-				break;
-			}
-			case "Verano" && "Cordoba":{
-
-				CorInvierno = 15000-(15000*0.10);
-				alert(`El precio del viaje a cordoba en invierno es de ${CorInvierno}`);
-				break;
-			}
-
-
-
-
-
-
-
-
-
+	/*
+	if (estaciones == "Invierno") {
+		 if (destinos == "Bariloche" ){ 
+			total= 15000*1.2;
+		 }else if (destinos == "Mar del plata"){
+			total = 15000*0.8;
+		 }else if (destinos == "Cataratas"){
+			total = 15000*0.9;
+		 }else if (destinos == "Cordoba"){
+			total = 15000*0.9;
+		 }
+		 alert (`El precio de viaje a ${destinos} en invierno $${total}`)
 	}
+	if (estaciones == "Verano") {
+		
+		if (destinos == "Bariloche" ){ 
+			total = 15000*0.8;
+		}else if (destinos == "Mar del plata"){
+			total  = 15000*1.2;	
+		}else if (destinos == "Cataratas"){
+			total = 15000*1.1;	
+		}else if (destinos == "Cordoba"){
+			total = 15000*1.1;	
+		}
+		alert (`El precio de viaje a ${destinos} en verano $${total}`)
+   }
+   if (estaciones == "Otoño") {
 
+		if (destinos == "Bariloche" ){ 
+			total = 15000*1.1;	
+		}
+		else if (destinos == "Mar del plata"){
+			total = 15000*1.1;	
+		}
+		else if (destinos == "Cataratas"){
+			total= 15000*1.1;			
+			}
+		else if (destinos == "Cordoba"){
+			total = 15000*1.1;
+			
+		}
+	alert (`El precio de viaje a ${destinos} en otoño $${total}`)
+}
+if (estaciones == "Primavera") {
+		
+		if (destinos == "Bariloche" ) { 
+				total = 15000*1.1;	
+		}
+		else if (destinos == "Mar del plata") {
+				total = 15000*1.1;			
+		}
+		else if (destinos == "Cataratas") {
+				total= 15000*1.1			
+		}
+		else if (destinos == "Cordoba") {	
+				total = 15000				
+		 }
+	 alert (`El precio de viaje a ${destinos} en primavera $${total}`)
+  }*/
 
-	}
+}
 
-}//FIN DE LA FUNCIÓN
