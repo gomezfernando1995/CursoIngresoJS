@@ -4,82 +4,67 @@ siendo 1 para “piedra”, el 2 para “papel” y 3 para “tijera”.
 El jugador seleccionará una imagen correspondiente 
 a su opción  y le informaremos si ganó, empató o perdió.
 */
-var eleccionMaquina;
+let NumeroRamdom
 
 function comenzar()
 {
-	
+  NumeroRamdom = Math.round(Math.random()*2+1)
+  alert(NumeroRamdom)
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+  
+
+ switch (NumeroRamdom){
+
+        case 1: 
+            alert ("WTF UN EMPATE ? (o_O)");
+            break;
+        case 2: 
+            alert ("QUIEN LO DIRIA, EL PAPEL LE GANA A LA PIEDRA, PSS PERDISTES!!");
+            break;
+        case 3:
+            alert ("ESOOOOOO!!! GANASTES COMPAÑERO!! LA PIEDRA LE GANA A LA TIJERA ☻");
+            break;     
+          }
+
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+  switch (NumeroRamdom){
 
+    case 1: 
+        alert ("ESOOOOOO!!! GANASTES COMPAÑERO!! EL PAPEL LE PARTE LA MADRE A LA PIEDRA ☻");
+        break;
+    case 2: 
+        alert ("WTF UN EMPATE ? (o_O)");
+        break;
+    case 3:
+        alert ("PSS PERDISTES!!");
+        break;
+    }
 
 }//FIN DE LA FUNCIÓN
+
 function tijera()
 {
 	
+  switch (NumeroRamdom){
+
+    case 1: 
+        alert ("TUN TUN TUNNNNN ,HAS PERDIDO ");
+        break;
+    case 2: 
+        alert ("HAS GANADO COMPAÑERO");
+        break;
+    case 3:
+        alert ("MM EMPATASTES :/ ");
+        break;
+      }
 
 }//FIN DE LA FUNCIÓN
 
-
-let numeroSecreto; 
-let contadorIntentos= 0;
-let flag = 0;
-
-function comenzar()
-{
-	//Genero el número RANDOM entre 1 y 100
-    numeroSecreto = Math.round(Math.random() * 99 + 1);
-    alert(numeroSecreto );
-    document.getElementById("txtIdNumero").focus();
-    //contadorIntentos = 0;
-    document.getElementById("txtIdIntentos").value = contadorIntentos;
-    flag= 1;
-
-  }
-	
-function verificar(){
-  let numero;
-  
-  if (flag == 0){
-    alert("Primero debes presionar el boton comenzar");
-  }
-  else{
-    
-    contadorIntentos++;
-    alert ("verificado");
-    numero = parseInt(document.getElementById("txtIdNumero").value);
-    
-    if( numeroSecreto == numero){
-
-	switch (contadorIntentos)	
-
-	case 1 :{
-		 ("Uusted es un campeon")
-		 break;
-	 }
-	case 2 :{
-
-
-	}
-		
-		
-	else if( numeroSecreto < numero){
-      document.getElementById("txtIdIntentos").value = contadorIntentos;
-      alert ("Se paso...")
-    }
-    else {
-      document.getElementById("txtIdIntentos").value = contadorIntentos;
-      alert ("Falta...")
-    }
-    
-    document.getElementById("txtIdNumero").value = "";
-    document.getElementById("txtIdNumero").focus();
 

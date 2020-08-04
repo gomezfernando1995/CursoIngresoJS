@@ -11,6 +11,6 @@ function mostrar()
 	alert(i);
 	i--}
 
-	alert(i );
+	
 
 }//FIN DE LA FUNCIÓN

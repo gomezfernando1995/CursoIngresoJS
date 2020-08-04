@@ -4,9 +4,19 @@ Al presionar el botón pedir un sexo
 function mostrar()
 {
 	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
 
+	/*do{
+		sexoIngresado = prompt("ingrese f ó m .");
+	}while(sexoIngresado != "f"  && sexoIngresado != "m" && sexoIngresado == "null");
 
+	document.getElementById("txtIdSexo").value= sexoIngresado;*/
+	 
+	 sexoIngresado = prompt("ingrese f ó m .");
+	
+     while (!(sexoIngresado == "f" ||  sexoIngresado == "m" )){
+			        sexoIngresado = prompt("reingrese f ó m .");
+		}
 
-	txtIdSexo.value=sexoIngresado;
-}//FIN DE LA FUNCIÓN
+	document.getElementById("txtIdSexo").value= sexoIngresado;  
+	
+}//FIN DE LA FUNCIÓN      

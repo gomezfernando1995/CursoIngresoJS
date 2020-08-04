@@ -17,11 +17,11 @@ function comenzar()
     numeroSecreto = Math.round(Math.random() * 99 + 1);
     alert(numeroSecreto );
     document.getElementById("txtIdNumero").focus();
-    //contadorIntentos = 0;
+    contadorIntentos = 0;
     document.getElementById("txtIdIntentos").value = contadorIntentos;
     flag= 1;
 
-  }
+}
 	
 function verificar(){
   let numero;
@@ -35,29 +35,50 @@ function verificar(){
     alert ("verificado");
     numero = parseInt(document.getElementById("txtIdNumero").value);
     
-    if( numeroSecreto == numero){
+  if( numeroSecreto == numero){      // SI EL USUARIO ACIERTA
 
-	switch (contadorIntentos)	
+	switch (contadorIntentos){    //EN TAL CASO QUE EL ACIERTO SEA EN TANTOS INTENTOS DE VECES ENTONCES
 
-	case 1 :{
-		 ("Uusted es un campeon")
-		 break;
-	 }
-	case 2 :{
+      	case 1 :          
+                alert("usted es un Psíquico") 
+                  break;
+       
+        case 2 :
+               alert("excelente percepción")
+                break;
+     
+        case 3 :
+               alert("Esto es suerte")
+                break;
 
+        case 4 :           
+               alert("Excelente técnica")
+              break;
+       
+        case 5 :
+               alert("usted está en la media")
+               break;
+        
+        case 6:   
+              alert("falta técnica")
+               break;
+        
+        default:      
+              alert("afortunado en el amor!!")
+               break;
 
-	}
-		
-		
-	else if( numeroSecreto < numero){
-      document.getElementById("txtIdIntentos").value = contadorIntentos;
-      alert ("Se paso...")
-    }
-    else {
-      document.getElementById("txtIdIntentos").value = contadorIntentos;
-      alert ("Falta...")
+                    
+        }        // LLAVE FIN DEL SWITCH
+
+      } else if( numeroSecreto < numero){ 
+               document.getElementById("txtIdIntentos").value = contadorIntentos;
+                alert ("Se paso...")
+  
+      } else {
+                document.getElementById("txtIdIntentos").value = contadorIntentos;
+                alert ("Falta...")
     }
     
-    document.getElementById("txtIdNumero").value = "";
-    document.getElementById("txtIdNumero").focus();
-
+  }
+  
+}

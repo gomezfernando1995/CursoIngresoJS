@@ -22,8 +22,8 @@ function mostrar()
 	let  n= 0;
 	let  c= 0;
 	let NumerosPares = 0;
-	let PromedioPositivos = 0;
-	let PromedioNegativos = 0;
+	let PromedioPositivos;
+	let PromedioNegativos;
 	let DifPosNeg;
 
 	do {              											//COMIENZO DE CICLO DO WHILE.
@@ -34,11 +34,11 @@ function mostrar()
 		SumaNegativos = numero + SumaNegativos;                 //COMIENZO DE LAS DECLARACIONES CONDICIONALES.
 	n++
 	}	
-	if (numero >= 0){
+	else if(numero > 0){
        SumaPositivos = numero + SumaPositivos;				  
 	p++;
 	}
-	if (numero == 0){
+	else{
 		c++;
 	}
 	if (numero % 2 == 0 ){
